@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/fonts.css" />
+		<link rel="stylesheet" href="./css/animation.css">
+		<link rel="stylesheet" href="./css/responsive.css">
+		<title>Spotify</title>
+		<link rel="icon" href="https://www.scdn.co/i/_global/favicon.png" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+			rel="stylesheet"
+        />
+	</head>
+	<body>
+		<!--Header-->
+		<custom-header></custom-header>
+		<!--Header-->
+
+        <div class="premium-head">
+            <div class="container">
+                <h1>Switch to Premium. Be Happy.</h1>
+                <h2 class="title-2">Premium's Sound is incredible. Enjoy ad-free music on all your devices.*</h2>
+                <a class="black_btn" href="#plans">View Plans</a>
+                <p><small><a href="">*Terms and Conditions</a> Applied.</small></p>
+            </div>
+        </div>
+
+        <div class="why-premium">
+            <div class="container">
+                <h2 class="title-1">Why Should you upgrade to Premium?</h2>
+            </div>
+            <div class="container why-cards">
+                <why-card image="./assets/benefit_1.png"
+                          title="Music Download."
+                          text="Listen Wherever you want.">
+                </why-card>
+                <why-card image="./assets/benefit_2.png"
+                          title="No ads Interruptions."
+                          text="Enjoy Nonstop Music.">
+                </why-card>
+                <why-card image="./assets/benefit_3.png"
+                          title="Play any song you want."
+                          text="Even on cell phones.">
+                </why-card>
+                <why-card image="./assets/benefit_4.png"
+                          title="Unlimited Skip Songs."
+                          text="Just hit the next Button.">
+                </why-card>
+            </div>
+        </div>
+        
+        <div id="plans" class="premium-plans">
+            <div class="container plans-text">
+                <h2>Choose Your Premium</h2>
+                <p>You can listen to Spotify wherever you want, on any device you want.</p>
+            </div>
+            <div class="container plans-container">
+                <pay-plan prepay=""
+                          name="Indivisdual"
+                          price="299 Rs/Month"
+                          account="1 Bill"
+                          list-1="Lisen to their music without ads"
+                          list-2="Play anywhere, even listen offline"
+                          list-3="Play Whenever you want"
+                          list-4="Pre-pay or Sign up"
+                          btntext="Get Started"
+                          smalltesxt="*Terms and Conditions Applied."
+                          active="false">
+                </pay-plan>
+                <pay-plan prepay=""
+                          name="Double"
+                          price="499 Rs/Month"
+                          account="2 Bill"
+                          list-1="2 Premium accounts for couples living under the same roof"
+                          list-2="Duo Mix: A Playlist for two, regularly updated with music the two of you will enjoy."
+                          list-3="Uninterrupted music listening, offline playback, anytime playback."
+                          list-4=""
+                          btntext="Get Started"
+                          smalltesxt="*Terms and Conditions Applied."
+                          active="false">
+                </pay-plan>
+                <pay-plan prepay=""
+                          name="Family"
+                          price="999 Rs/Month"
+                          account="6 Members"
+                          list-1="Living under the same roof: 6 separate for family members Premium Account."
+                          list-2="Family Mix: A playlist for your family, regular updated with music for you all to enjoy."
+                          list-3="Block uncensored music."
+                          list-4="Uninterrupted music listening, offline playback, anytime playback."
+                          btntext="Get Started"
+                          smalltesxt="*Terms and Conditions Applied."
+                          active="false">
+                </pay-plan>
+                <pay-plan prepay=""
+                          name="Student"
+                          price="99 Rs/Month"
+                          account="1 Bill"
+                          list-1="Beneficial university special for students Download."
+                          list-2="Listen to your music without ads."
+                          list-3="Play anywhere, even listen offline."
+                          list-4="Play whenever you want."
+                          btntext=""
+                          smalltesxt=""
+                          active="true">
+                </pay-plan>
+            </div>
+        </div>
+
+
+		<!--Footer-->
+		<custom-footer></custom-footer>
+		<!--Footer-->
+
+		<div id="opacity" class="opacity"></div>
+		<script src="./component/header.js"></script>
+        <script src="./component/footer.js"></script>
+        <script src="./component/whyCard.js"></script>
+        <script src="./component/payPlan.js"></script>
+        <script src="./js/main.js"></script>
+        <script>
+            //change header background color
+            window.onscroll = function() {scrollFunction()};
+            document.querySelector("header").style.backgroundColor = "transparent";
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.querySelector("header").style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+                }else {
+                    document.querySelector("header").style.backgroundColor = "transparent";
+                }
+            }
+        </script>
+	</body>
+</html>
